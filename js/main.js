@@ -60,6 +60,69 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // --- Photo upload ---
+  const uploadZone  = document.getElementById('upload-zone');
+  const fileInput   = document.getElementById('photo-upload');
+  const fileList    = document.getElementById('file-list');
+  let selectedFiles = [];
+
+  function formatBytes(bytes) {
+    return bytes < 1024 * 1024
+      ? (bytes / 1024).toFixed(0) + ' KB'
+      : (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+  }
+
+  function renderFileList() {
+    if (!fileList) return;
+    if (selectedFiles.length === 0) {
+      fileList.hidden = true;
+      fileList.innerHTML = '';
+      return;
+    }
+    fileList.hidden = false;
+    fileList.innerHTML = selectedFiles.map((f, i) => `
+      <li class="file-item">
+        <span class="file-item-name">${f.name}</span>
+        <span class="file-item-size">${formatBytes(f.size)}</span>
+        <button type="button" class="file-item-remove" data-index="${i}" aria-label="Remove ${f.name}">&times;</button>
+      </li>
+    `).join('');
+
+    fileList.querySelectorAll('.file-item-remove').forEach(btn => {
+      btn.addEventListener('click', () => {
+        selectedFiles.splice(Number(btn.dataset.index), 1);
+        renderFileList();
+      });
+    });
+  }
+
+  function addFiles(newFiles) {
+    const MAX_SIZE = 10 * 1024 * 1024;
+    const ALLOWED  = /\.(jpe?g|png|webp|heic|pdf)$/i;
+    Array.from(newFiles).forEach(f => {
+      if (!ALLOWED.test(f.name)) return;
+      if (f.size > MAX_SIZE) return;
+      if (!selectedFiles.some(existing => existing.name === f.name && existing.size === f.size)) {
+        selectedFiles.push(f);
+      }
+    });
+    renderFileList();
+  }
+
+  if (uploadZone && fileInput) {
+    uploadZone.addEventListener('click', () => fileInput.click());
+    uploadZone.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') fileInput.click(); });
+    fileInput.addEventListener('change', () => { addFiles(fileInput.files); fileInput.value = ''; });
+
+    uploadZone.addEventListener('dragover', (e) => { e.preventDefault(); uploadZone.classList.add('drag-over'); });
+    uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('drag-over'));
+    uploadZone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      uploadZone.classList.remove('drag-over');
+      addFiles(e.dataTransfer.files);
+    });
+  }
+
   // --- Quote form submission (basic) ---
   const quoteForm = document.getElementById('quote-form');
   if (quoteForm) {

@@ -119,6 +119,23 @@
                 <textarea id="details" name="details" placeholder="Describe the situation — load type, what went wrong, how urgent it is, any special considerations (refrigerated, hazmat, etc.)." required></textarea>
               </div>
 
+              <div class="form-group">
+                <label>Photos / Documents <span style="font-weight:400; color:var(--gray-400);">(optional)</span></label>
+                <div class="upload-zone" id="upload-zone" role="button" tabindex="0" aria-label="Upload photos or documents">
+                  <input type="file" id="photo-upload" name="photos" accept="image/*,.pdf" multiple hidden />
+                  <div class="upload-zone-inner">
+                    <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                      <polyline points="17 8 12 3 7 8"/>
+                      <line x1="12" y1="3" x2="12" y2="15"/>
+                    </svg>
+                    <p class="upload-prompt">Drag &amp; drop photos here, or <span class="upload-link">browse</span></p>
+                    <p class="upload-hint">JPG, PNG, PDF up to 10 MB each</p>
+                  </div>
+                </div>
+                <ul class="file-list" id="file-list" hidden></ul>
+              </div>
+
               <button type="submit" class="btn btn-orange form-submit">Send Request — We'll Respond Fast</button>
             </form>
           </div>
