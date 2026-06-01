@@ -1,27 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Case Study — Restore Logistics Redesign</title>
+  <title>Case Study — Restore Logistics Website</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --navy:      #080f1c;
-      --orange:    #ff5500;
-      --white:     #ffffff;
-      --off-white: #f6f7f9;
-      --border:    #e4e7ec;
-      --text:      #1c2b3a;
-      --muted:     #556070;
-      --radius:    12px;
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    html { scroll-behavior: smooth; }
+    :root {
+      --navy: #080f1c;
+      --orange: #ff5500;
+      --white: #ffffff;
+      --off-white: #f6f7f9;
+      --border: #e4e7ec;
+      --text: #1c2b3a;
+      --muted: #556070;
+      --radius: 12px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
       background: var(--off-white);
@@ -30,8 +41,17 @@
       font-size: 16px;
     }
 
-    .container      { max-width: 860px;  margin: 0 auto; padding: 0 2rem; }
-    .container-wide { max-width: 1060px; margin: 0 auto; padding: 0 2rem; }
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .container-wide {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
 
     .kicker {
       display: inline-block;
@@ -43,12 +63,37 @@
       margin-bottom: 1rem;
     }
 
-    h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 900; line-height: 1.1; }
-    h2 { font-size: clamp(1.4rem, 3vw, 2rem);   font-weight: 800; line-height: 1.2; }
-    h3 { font-size: 1.1rem; font-weight: 700; }
-    h4 { font-size: 0.95rem; font-weight: 600; }
-    p  { color: var(--muted); }
-    .lead { font-size: 1.1rem; color: #3a4c5e; line-height: 1.8; }
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 900;
+      line-height: 1.1;
+    }
+
+    h2 {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    .lead {
+      font-size: 1.1rem;
+      color: #3a4c5e;
+      line-height: 1.8;
+    }
 
     /* ── TOPBAR ── */
     .topbar {
@@ -59,13 +104,29 @@
       top: 0;
       z-index: 100;
     }
-    .topbar .container { display: flex; align-items: center; justify-content: space-between; }
-    .topbar-back {
-      font-size: 0.82rem; font-weight: 600;
-      color: var(--muted); text-decoration: none;
+
+    .topbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
-    .topbar-back:hover { color: var(--orange); }
-    .topbar-label { font-size: 0.82rem; font-weight: 600; color: var(--text); }
+
+    .topbar-back {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .topbar-back:hover {
+      color: var(--orange);
+    }
+
+    .topbar-label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text);
+    }
 
     /* ── COVER ── */
     .cover {
@@ -74,46 +135,94 @@
       position: relative;
       overflow: hidden;
     }
+
     .cover::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 55% 65% at 85% 50%, rgba(255,85,0,0.10) 0%, transparent 68%);
+      background: radial-gradient(ellipse 55% 65% at 85% 50%, rgba(255, 85, 0, 0.10) 0%, transparent 68%);
       pointer-events: none;
     }
-    .cover-inner { position: relative; z-index: 1; }
-    .cover h1 { color: var(--white); margin: 1rem 0 1.25rem; }
-    .cover h1 em { color: var(--orange); font-style: normal; }
-    .cover-sub { font-size: 1.05rem; color: rgba(255,255,255,0.70); max-width: 600px; line-height: 1.8; }
+
+    .cover-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cover h1 {
+      color: var(--white);
+      margin: 1rem 0 1.25rem;
+    }
+
+    .cover h1 em {
+      color: var(--orange);
+      font-style: normal;
+    }
+
+    .cover-sub {
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.70);
+      max-width: 600px;
+      line-height: 1.8;
+    }
+
     .cover-meta {
-      display: flex; flex-wrap: wrap; gap: 2.5rem;
-      margin-top: 3rem; padding-top: 2.5rem;
-      border-top: 1px solid rgba(255,255,255,0.10);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      margin-top: 3rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.10);
     }
+
     .cover-meta-label {
-      display: block; font-size: 0.63rem; font-weight: 700;
-      letter-spacing: 2px; text-transform: uppercase;
-      color: rgba(255,255,255,0.38); margin-bottom: 0.3rem;
+      display: block;
+      font-size: 0.63rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.38);
+      margin-bottom: 0.3rem;
     }
-    .cover-meta-value { font-size: 0.92rem; font-weight: 600; color: rgba(255,255,255,0.85); }
+
+    .cover-meta-value {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.85);
+    }
 
     /* ── SECTIONS ── */
-    .section       { padding: 5rem 0; }
-    .section-white { background: var(--white); }
-    .section-off   { background: var(--off-white); }
-    .section-navy  { background: var(--navy); }
+    .section {
+      padding: 5rem 0;
+    }
+
+    .section-white {
+      background: var(--white);
+    }
+
+    .section-off {
+      background: var(--off-white);
+    }
+
+    .section-navy {
+      background: var(--navy);
+    }
 
     /* ── DIVIDER ── */
-    hr.divider { border: none; border-top: 1px solid var(--border); }
+    hr.divider {
+      border: none;
+      border-top: 1px solid var(--border);
+    }
 
     /* ── PULL QUOTE ── */
     .pull-quote {
       border-left: 4px solid var(--orange);
       padding: 1.1rem 1.6rem;
-      background: rgba(255,85,0,0.05);
+      background: rgba(255, 85, 0, 0.05);
       border-radius: 0 var(--radius) var(--radius) 0;
       margin: 2.5rem 0;
     }
+
     .pull-quote p {
       font-size: 1.08rem;
       font-style: italic;
@@ -121,127 +230,348 @@
       line-height: 1.7;
       margin-bottom: 0.4rem;
     }
-    .pull-quote cite { font-size: 0.8rem; color: var(--muted); font-style: normal; font-weight: 600; }
+
+    .pull-quote cite {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-style: normal;
+      font-weight: 600;
+    }
 
     /* ── GRID CARDS ── */
-    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
-    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
     .card {
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 1.6rem;
     }
-    .card h3 { margin-bottom: 0.5rem; }
-    .card h4 { margin-bottom: 0.65rem; color: var(--text); }
-    .card p  { font-size: 0.91rem; }
+
+    .card h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .card h4 {
+      margin-bottom: 0.65rem;
+      color: var(--text);
+    }
+
+    .card p {
+      font-size: 0.91rem;
+    }
 
     /* ── STAT ROW ── */
-    .stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 2rem; }
-    .stat-card {
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 1.5rem 1rem; text-align: center;
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
     }
-    .stat-num   { display: block; font-size: 2.2rem; font-weight: 900; color: var(--orange); line-height: 1; margin-bottom: 0.35rem; }
-    .stat-label { font-size: 0.78rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.8px; }
+
+    .stat-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem 1rem;
+      text-align: center;
+    }
+
+    .stat-num {
+      display: block;
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--orange);
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+
+    .stat-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
 
     /* ── DECISION TABLE ── */
-    .decision-table { width: 100%; border-collapse: collapse; margin-top: 1.75rem; font-size: 0.91rem; }
+    .decision-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1.75rem;
+      font-size: 0.91rem;
+    }
+
     .decision-table thead th {
-      background: var(--navy); color: rgba(255,255,255,0.85);
-      padding: 0.85rem 1rem; text-align: left; font-size: 0.72rem;
-      font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+      background: var(--navy);
+      color: rgba(255, 255, 255, 0.85);
+      padding: 0.85rem 1rem;
+      text-align: left;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
     }
-    .decision-table thead th:first-child { border-radius: 8px 0 0 0; }
-    .decision-table thead th:last-child  { border-radius: 0 8px 0 0; }
-    .decision-table tbody tr { border-bottom: 1px solid var(--border); }
-    .decision-table tbody tr:last-child { border-bottom: none; }
+
+    .decision-table thead th:first-child {
+      border-radius: 8px 0 0 0;
+    }
+
+    .decision-table thead th:last-child {
+      border-radius: 0 8px 0 0;
+    }
+
+    .decision-table tbody tr {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .decision-table tbody tr:last-child {
+      border-bottom: none;
+    }
+
     .decision-table tbody td {
-      padding: 1rem 1rem; vertical-align: top;
-      background: var(--white); color: var(--muted); line-height: 1.65;
+      padding: 1rem 1rem;
+      vertical-align: top;
+      background: var(--white);
+      color: var(--muted);
+      line-height: 1.65;
     }
+
     .decision-table tbody td:first-child {
-      font-weight: 700; color: var(--text); width: 28%; border-right: 1px solid var(--border);
+      font-weight: 700;
+      color: var(--text);
+      width: 28%;
+      border-right: 1px solid var(--border);
     }
-    .decision-table tbody td:last-child { border-radius: 0 0 8px 0; }
-    .decision-table tbody tr:last-child td:first-child { border-radius: 0 0 0 8px; }
+
+    .decision-table tbody td:last-child {
+      border-radius: 0 0 8px 0;
+    }
+
+    .decision-table tbody tr:last-child td:first-child {
+      border-radius: 0 0 0 8px;
+    }
 
     /* ── SCREENSHOT ── */
-    .screenshot-block { margin-top: 4rem; }
-    .screenshot-block + .screenshot-block { margin-top: 5.5rem; }
-
-    .screenshot-header { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 1.25rem; }
-    .screenshot-num {
-      display: inline-flex; align-items: center; justify-content: center;
-      width: 32px; height: 32px; background: var(--orange); color: white;
-      border-radius: 50%; font-size: 0.72rem; font-weight: 800; flex-shrink: 0;
+    .screenshot-block {
+      margin-top: 4rem;
     }
+
+    .screenshot-block+.screenshot-block {
+      margin-top: 5.5rem;
+    }
+
+    .screenshot-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .screenshot-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background: var(--orange);
+      color: white;
+      border-radius: 50%;
+      font-size: 0.72rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
     .screenshot-header-text {}
-    .screenshot-header-text h3 { margin-bottom: 0.2rem; }
-    .screenshot-header-text p  { font-size: 0.9rem; }
+
+    .screenshot-header-text h3 {
+      margin-bottom: 0.2rem;
+    }
+
+    .screenshot-header-text p {
+      font-size: 0.9rem;
+    }
 
     .screenshot-wrap {
-      border-radius: 14px; overflow: hidden;
+      border-radius: 14px;
+      overflow: hidden;
       border: 1px solid #d0d5dd;
-      box-shadow: 0 6px 32px rgba(0,0,0,0.10), 0 2px 6px rgba(0,0,0,0.05);
+      box-shadow: 0 6px 32px rgba(0, 0, 0, 0.10), 0 2px 6px rgba(0, 0, 0, 0.05);
     }
+
     .browser-bar {
-      background: #1e1e1e; padding: 0.65rem 1rem;
-      display: flex; align-items: center; gap: 0.45rem;
+      background: #1e1e1e;
+      padding: 0.65rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
     }
-    .bd { width: 11px; height: 11px; border-radius: 50%; }
-    .bd:nth-child(1) { background: #ff5f57; }
-    .bd:nth-child(2) { background: #febc2e; }
-    .bd:nth-child(3) { background: #28c840; }
+
+    .bd {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+    }
+
+    .bd:nth-child(1) {
+      background: #ff5f57;
+    }
+
+    .bd:nth-child(2) {
+      background: #febc2e;
+    }
+
+    .bd:nth-child(3) {
+      background: #28c840;
+    }
+
     .browser-url {
-      margin-left: 0.65rem; background: #2d2d2d; border-radius: 5px;
-      padding: 0.22rem 0.8rem; font-size: 0.7rem;
-      color: rgba(255,255,255,0.5); flex: 1; max-width: 320px;
+      margin-left: 0.65rem;
+      background: #2d2d2d;
+      border-radius: 5px;
+      padding: 0.22rem 0.8rem;
+      font-size: 0.7rem;
+      color: rgba(255, 255, 255, 0.5);
+      flex: 1;
+      max-width: 320px;
     }
-    .screenshot-wrap img { display: block; width: 100%; height: auto; }
+
+    .screenshot-wrap img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
 
     /* ── ANNOTATION ── */
-    .annotations { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.9rem; }
+    .annotations {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
     .ann {
-      display: grid; grid-template-columns: 1.8rem 1fr;
-      gap: 0.75rem; align-items: start;
+      display: grid;
+      grid-template-columns: 1.8rem 1fr;
+      gap: 0.75rem;
+      align-items: start;
     }
+
     .ann-dot {
-      display: inline-flex; align-items: center; justify-content: center;
-      width: 24px; height: 24px; border-radius: 50%;
-      background: var(--navy); color: var(--orange);
-      font-size: 0.6rem; font-weight: 800; margin-top: 3px; flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--orange);
+      font-size: 0.6rem;
+      font-weight: 800;
+      margin-top: 3px;
+      flex-shrink: 0;
     }
-    .ann-body { font-size: 0.91rem; color: #3a4c5e; line-height: 1.65; }
-    .ann-body strong { color: var(--text); font-weight: 700; }
+
+    .ann-body {
+      font-size: 0.91rem;
+      color: #3a4c5e;
+      line-height: 1.65;
+    }
+
+    .ann-body strong {
+      color: var(--text);
+      font-weight: 700;
+    }
 
     /* ── TWO-COL LAYOUT ── */
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
 
     /* ── LIST ── */
     .styled-list {
-      list-style: none; padding: 0;
-      display: flex; flex-direction: column; gap: 0.65rem;
-      font-size: 0.91rem; color: var(--muted);
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      font-size: 0.91rem;
+      color: var(--muted);
     }
-    .styled-list li { display: flex; gap: 0.65rem; align-items: flex-start; line-height: 1.6; }
-    .styled-list li::before { content: '→'; color: var(--orange); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+    .styled-list li {
+      display: flex;
+      gap: 0.65rem;
+      align-items: flex-start;
+      line-height: 1.6;
+    }
+
+    .styled-list li::before {
+      content: '→';
+      color: var(--orange);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
 
     /* ── OUTCOME BAND ── */
-    .outcome-band { background: var(--orange); padding: 4rem 0; }
-    .outcome-band h2 { color: var(--white); margin-bottom: 0.75rem; }
-    .outcome-band p  { color: rgba(255,255,255,0.85); font-size: 1.05rem; max-width: 600px; }
-    .outcome-buttons { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
-    .btn-white-solid {
-      display: inline-block; background: white; color: var(--orange);
-      font-weight: 700; padding: 0.8rem 1.6rem; border-radius: 8px;
-      text-decoration: none; font-size: 0.93rem;
+    .outcome-band {
+      background: var(--orange);
+      padding: 4rem 0;
     }
+
+    .outcome-band h2 {
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+
+    .outcome-band p {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 1.05rem;
+      max-width: 600px;
+    }
+
+    .outcome-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .btn-white-solid {
+      display: inline-block;
+      background: white;
+      color: var(--orange);
+      font-weight: 700;
+      padding: 0.8rem 1.6rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.93rem;
+    }
+
     .btn-outline-light {
-      display: inline-block; border: 1px solid rgba(255,255,255,0.35);
-      background: rgba(255,255,255,0.12); color: white;
-      font-weight: 600; padding: 0.8rem 1.6rem; border-radius: 8px;
-      text-decoration: none; font-size: 0.93rem;
+      display: inline-block;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      background: rgba(255, 255, 255, 0.12);
+      color: white;
+      font-weight: 600;
+      padding: 0.8rem 1.6rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.93rem;
     }
 
     /* ── BEFORE / AFTER ── */
@@ -251,7 +581,9 @@
       gap: 1.5rem;
       margin-top: 2.5rem;
     }
+
     .ba-col {}
+
     .ba-label {
       display: inline-flex;
       align-items: center;
@@ -264,21 +596,25 @@
       border-radius: 999px;
       margin-bottom: 0.85rem;
     }
+
     .ba-label-before {
-      background: rgba(255,255,255,0.08);
-      color: rgba(255,255,255,0.55);
-      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.55);
+      border: 1px solid rgba(255, 255, 255, 0.12);
     }
+
     .ba-label-after {
-      background: rgba(255,85,0,0.15);
+      background: rgba(255, 85, 0, 0.15);
       color: var(--orange);
-      border: 1px solid rgba(255,85,0,0.3);
+      border: 1px solid rgba(255, 85, 0, 0.3);
     }
+
     .ba-screenshot {
       border-radius: 12px;
       overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.08);
+      border: 1px solid rgba(255, 255, 255, 0.08);
     }
+
     .ba-screenshot img {
       display: block;
       width: 100%;
@@ -286,12 +622,14 @@
       object-fit: cover;
       object-position: top;
     }
+
     .ba-points {
       margin-top: 1.1rem;
       display: flex;
       flex-direction: column;
       gap: 0.55rem;
     }
+
     .ba-point {
       display: flex;
       gap: 0.6rem;
@@ -299,22 +637,58 @@
       font-size: 0.85rem;
       line-height: 1.55;
     }
-    .ba-point-icon { flex-shrink: 0; font-size: 0.8rem; margin-top: 2px; }
-    .ba-point-text-before { color: rgba(255,255,255,0.5); }
-    .ba-point-text-after  { color: rgba(255,255,255,0.8); }
+
+    .ba-point-icon {
+      flex-shrink: 0;
+      font-size: 0.8rem;
+      margin-top: 2px;
+    }
+
+    .ba-point-text-before {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .ba-point-text-after {
+      color: rgba(255, 255, 255, 0.8);
+    }
 
     /* ── FOOTER ── */
-    .cs-footer { background: var(--navy); padding: 2.5rem 0; text-align: center; }
-    .cs-footer p { color: rgba(255,255,255,0.4); font-size: 0.8rem; }
-    .cs-footer strong { color: rgba(255,255,255,0.65); }
+    .cs-footer {
+      background: var(--navy);
+      padding: 2.5rem 0;
+      text-align: center;
+    }
+
+    .cs-footer p {
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 0.8rem;
+    }
+
+    .cs-footer strong {
+      color: rgba(255, 255, 255, 0.65);
+    }
 
     @media (max-width: 720px) {
-      .grid-2, .grid-3, .stat-row, .two-col, .ba-grid { grid-template-columns: 1fr; }
-      .cover-meta { gap: 1.5rem; }
-      .ba-screenshot img { height: 260px; }
+
+      .grid-2,
+      .grid-3,
+      .stat-row,
+      .two-col,
+      .ba-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cover-meta {
+        gap: 1.5rem;
+      }
+
+      .ba-screenshot img {
+        height: 260px;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- TOPBAR -->
@@ -328,10 +702,11 @@
   <!-- COVER -->
   <section class="cover">
     <div class="container cover-inner">
-      <span class="kicker">Product Case Study</span>
-      <h1>Redesigning a Web Presence for<br><em>a Business Its Customers Couldn't Find</em></h1>
+      <span class="kicker">Business Case Study</span>
+      <h1>Building a Sales Asset for<br><em>a Business That Runs on Urgency</em></h1>
       <p class="cover-sub">
-        Restore Logistics had 25 years of operational experience and no digital presence. The project: design a website that matches how their customers actually behave — under pressure, on mobile, with minutes to decide.
+        Restore Logistics had 25 years of experience and zero digital reach. Here's how we built a website that turned
+        their expertise into inbound leads.
       </p>
       <div class="cover-meta">
         <div>
@@ -348,7 +723,7 @@
         </div>
         <div>
           <span class="cover-meta-label">Deliverable</span>
-          <span class="cover-meta-value">4-page responsive website</span>
+          <span class="cover-meta-value">4-page website, live on Vercel</span>
         </div>
       </div>
     </div>
@@ -358,12 +733,14 @@
   <section class="section section-white">
     <div class="container">
       <span class="kicker">01 — The Situation</span>
-      <h2>A Strong Operation With No Way to Be Found</h2>
+      <h2>A Strong Business, Invisible Online</h2>
       <p class="lead" style="margin-top:1rem;">
-        Restore Logistics fixes rejected trailers, shifted loads, and overweight rigs — fast. Their customers aren't comparison shopping. They arrive under operational pressure and need a vendor in hours.
+        Restore Logistics fixes rejected trailers, shifted loads, and overweight rigs — fast. Their customers aren't
+        comparison shopping. They're in a crisis and need a vendor in hours.
       </p>
       <p style="margin-top:1.25rem; font-size:0.95rem;">
-        Despite real capability and verified Google reviews, they had no digital presence to surface that demand. Every new customer came through referral. That was the gap this project was scoped to close.
+        Despite real capability and verified Google reviews, they had no web presence to capture that demand. Every new
+        customer came through referral. That was the gap.
       </p>
 
       <div class="grid-2" style="margin-top:2.5rem;">
@@ -378,7 +755,7 @@
           </ul>
         </div>
         <div class="card">
-          <h4>Success Criteria</h4>
+          <h4>What Success Looks Like</h4>
           <ul class="styled-list" style="margin-top:0.75rem;">
             <li>A dispatcher Googles "load restoration Dallas" — Restore appears and converts</li>
             <li>Every page drives visitors toward a phone call or quote form submission</li>
@@ -390,8 +767,8 @@
       </div>
 
       <div class="pull-quote">
-        <p>"The site had to do the work of a first conversation — before anyone picked up the phone."</p>
-        <cite>Design principle</cite>
+        <p>"The website had to communicate capability and reliability in under 10 seconds — not after a phone call."</p>
+        <cite>Project direction brief</cite>
       </div>
     </div>
   </section>
@@ -402,7 +779,8 @@
       <span class="kicker" style="color:rgba(255,255,255,0.55);">Before &amp; After</span>
       <h2 style="color:var(--white); margin-top:0.25rem;">The Same Business. Two Very Different First Impressions.</h2>
       <p style="color:rgba(255,255,255,0.62); margin-top:1rem; max-width:640px; font-size:0.97rem;">
-        The old site had a phone number and a service list. It had no ability to convert a visitor who didn't already know the company.
+        The old site had a phone number and a service list. It had no ability to convert a visitor who didn't already
+        know the company.
       </p>
 
       <div class="ba-grid">
@@ -411,66 +789,69 @@
         <div class="ba-col">
           <span class="ba-label ba-label-before">✕ &nbsp;Before — restorelogistics.com</span>
           <div class="ba-screenshot">
-            <img
-              src="img/before-site.png"
-              alt="Restore Logistics original Weebly website — before redesign"
-              loading="lazy"
-            />
+            <img src="img/before-site.png" alt="Restore Logistics original Weebly website — before redesign"
+              loading="lazy" />
           </div>
           <div class="ba-points">
             <div class="ba-point">
               <span class="ba-point-icon">✕</span>
-              <span class="ba-point-text-before">No headline. A visitor lands with no instant answer to "can these people fix my problem?"</span>
+              <span class="ba-point-text-before">No headline. A visitor lands with no instant answer to "can these
+                people fix my problem?"</span>
             </div>
             <div class="ba-point">
               <span class="ba-point-icon">✕</span>
-              <span class="ba-point-text-before">Services listed as a comma-separated sentence — no hierarchy, no calls to action</span>
+              <span class="ba-point-text-before">Services listed as a comma-separated sentence — no hierarchy, no calls
+                to action</span>
             </div>
             <div class="ba-point">
               <span class="ba-point-icon">✕</span>
-              <span class="ba-point-text-before">Two large circular logo images take up the majority of the page — no conversion purpose</span>
+              <span class="ba-point-text-before">Two large circular logo images take up the majority of the page — no
+                conversion purpose</span>
             </div>
             <div class="ba-point">
               <span class="ba-point-icon">✕</span>
-              <span class="ba-point-text-before">Zero social proof — 25 years of experience and real Google reviews are invisible</span>
+              <span class="ba-point-text-before">Zero social proof — 25 years of experience and real Google reviews are
+                invisible</span>
             </div>
             <div class="ba-point">
               <span class="ba-point-icon">✕</span>
-              <span class="ba-point-text-before">"Site powered by Weebly" in the footer — signals a business that hasn't invested in its presence</span>
+              <span class="ba-point-text-before">"Site powered by Weebly" in the footer — signals a business that hasn't
+                invested in its presence</span>
             </div>
           </div>
         </div>
 
         <!-- AFTER -->
         <div class="ba-col">
-          <span class="ba-label ba-label-after">✓ &nbsp;After — New Design</span>
+          <span class="ba-label ba-label-after">✓ &nbsp;After </span>
           <div class="ba-screenshot">
-            <img
-              src="img/after-01.jpg"
-              alt="Restore Logistics redesigned website — after"
-              loading="lazy"
-            />
+            <img src="img/after-01.jpg" alt="Restore Logistics redesigned website — after" loading="lazy" />
           </div>
           <div class="ba-points">
             <div class="ba-point">
               <span class="ba-point-icon">✓</span>
-              <span class="ba-point-text-after">Crisis-led headline names the customer's problem in the first five words</span>
+              <span class="ba-point-text-after">Crisis-led headline names the customer's problem in the first five
+                words</span>
             </div>
             <div class="ba-point">
               <span class="ba-point-icon">✓</span>
-              <span class="ba-point-text-after">A real Google review is visible before any service is described, establishing third-party trust immediately</span>
+              <span class="ba-point-text-after">A real Google review is visible before any service is described,
+                establishing third-party trust immediately</span>
             </div>
             <div class="ba-point">
               <span class="ba-point-icon">✓</span>
-              <span class="ba-point-text-after">Phone number and quote CTA permanently visible — no hunting required for a dispatcher on a deadline</span>
+              <span class="ba-point-text-after">Phone number and quote CTA permanently visible — no hunting required for
+                a dispatcher on a deadline</span>
             </div>
             <div class="ba-point">
               <span class="ba-point-icon">✓</span>
-              <span class="ba-point-text-after">Scrolling problem strip forces self-identification — the visitor sees their exact situation named</span>
+              <span class="ba-point-text-after">Scrolling problem strip forces self-identification — the visitor sees
+                their exact situation named</span>
             </div>
             <div class="ba-point">
               <span class="ba-point-icon">✓</span>
-              <span class="ba-point-text-after">Professional visual language signals a company worth calling — before the visitor reads a word</span>
+              <span class="ba-point-text-after">Professional visual language signals a company worth calling — before
+                the visitor reads a word</span>
             </div>
           </div>
         </div>
@@ -484,22 +865,25 @@
   <!-- ── 02. THE CUSTOMER ── -->
   <section class="section section-off">
     <div class="container">
-      <span class="kicker">02 — The User</span>
-      <h2>Who Uses This — and What State Are They In When They Arrive</h2>
+      <span class="kicker">02 — The Customer</span>
+      <h2>Who Was the Website Actually Built For</h2>
       <p class="lead" style="margin-top:1rem;">
-        Not modeled by demographics — modeled by behavior. What is the user doing when they land here, what triggered the search, and what does the site need to resolve for them?
+        Not in demographic terms — in behavioral terms. What are they doing when they land here, and what do they need
+        to see to act?
       </p>
 
       <div class="grid-3" style="margin-top:2.5rem;">
         <div class="card">
           <span style="font-size:1.5rem; display:block; margin-bottom:0.75rem;">🚛</span>
           <h4>The Dispatcher</h4>
-          <p>Driver rejected at a receiver. Hours to sort it before detention fees compound. Will call the first credible option they find.</p>
+          <p>Driver rejected at a receiver. Hours to sort it before detention fees compound. Will call the first
+            credible option they find.</p>
         </div>
         <div class="card">
           <span style="font-size:1.5rem; display:block; margin-bottom:0.75rem;">📋</span>
           <h4>The Logistics Manager</h4>
-          <p>Evaluating vendors for ongoing work. Needs proof of experience and clear service scope before committing.</p>
+          <p>Evaluating vendors for ongoing work. Needs proof of experience and clear service scope before committing.
+          </p>
         </div>
         <div class="card">
           <span style="font-size:1.5rem; display:block; margin-bottom:0.75rem;">🏢</span>
@@ -508,10 +892,12 @@
         </div>
       </div>
 
-      <div style="margin-top:2rem; background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:1.75rem;">
-        <h4 style="margin-bottom:0.85rem;">Design Constraint</h4>
+      <div
+        style="margin-top:2rem; background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:1.75rem;">
+        <h4 style="margin-bottom:0.85rem;">The Core Insight</h4>
         <p style="font-size:0.93rem;">
-          None of these users are browsing. They arrive under operational stress with a defined problem and limited time. The information architecture had to surface relevance immediately, establish credibility before asking for commitment, and keep the path to contact visible at every step.
+          None of these visitors are browsing. They arrive under operational stress. The site had to speak to the crisis
+          first, build trust second, and make the next action obvious — at every point on the page.
         </p>
       </div>
     </div>
@@ -522,10 +908,10 @@
   <!-- ── 03. BUSINESS DECISIONS THAT DROVE THE BUILD ── -->
   <section class="section section-white">
     <div class="container">
-      <span class="kicker">03 — Product Decisions</span>
-      <h2>What Was Built, and Why</h2>
+      <span class="kicker">03 — Key Decisions</span>
+      <h2>Business Rationale Behind Every Major Choice</h2>
       <p class="lead" style="margin-top:1rem;">
-        Every structural decision maps to a user behavior or business requirement. The table below documents each decision and its rationale.
+        Every structural decision on this website was driven by a business question, not a design preference.
       </p>
 
       <table class="decision-table" style="margin-top:2.25rem;">
@@ -537,36 +923,44 @@
         </thead>
         <tbody>
           <tr>
-            <td>Lead with the user's problem, not the company's story</td>
-            <td>Users under operational stress skip company history. "We Fix What Others Walk Away From" names their specific situation in five words — that's the condition for continued engagement.</td>
+            <td>Lead with the customer's crisis, not the company's story</td>
+            <td>Visitors in crisis skip company history. "We Fix What Others Walk Away From" names their problem in five
+              words — that earns the scroll.</td>
           </tr>
           <tr>
             <td>Phone number visible on every page, at all times</td>
-            <td>If a dispatcher has to search for the phone number, they call someone else. It's visible on every page, always.</td>
+            <td>If a dispatcher has to search for the phone number, they call someone else. It's visible on every page,
+              always.</td>
           </tr>
           <tr>
             <td>Real Google reviews embedded early — including in the hero</td>
-            <td>Google reviews in the hero — not company-written testimonials. Third-party credibility before the visitor finishes the headline.</td>
+            <td>Google reviews in the hero — not company-written testimonials. Third-party credibility before the
+              visitor finishes the headline.</td>
           </tr>
           <tr>
             <td>Load Restoration given priority over all other services</td>
-            <td>Restoration addresses the highest-priority user need — the most time-critical situation in the product's scope. A user searching for load rework has already decided to hire someone. They just need to choose who.</td>
+            <td>Restoration drives the most urgent, highest-intent inquiries. A visitor searching for load rework has
+              already decided to hire someone — they just need to choose who.</td>
           </tr>
           <tr>
             <td>A dedicated FAQ section addressing pre-call objections</td>
-            <td>Each FAQ answer removes a specific reason not to call. "Do you handle refrigerated freight?" "Can you come to us?" Answered on the page, they stop being objections.</td>
+            <td>Each FAQ answer removes a specific reason not to call. "Do you handle refrigerated freight?" "Can you
+              come to us?" Answered on the page, they stop being objections.</td>
           </tr>
           <tr>
             <td>Mobile-first layout with a two-button sticky footer</td>
-            <td>Dispatchers are on the road when freight problems hit. The mobile sticky footer gives them two options — call now or submit details — without having to scroll anywhere.</td>
+            <td>Dispatchers are on the road when freight problems hit. The mobile sticky footer gives them two options —
+              call now or submit details — without having to scroll anywhere.</td>
           </tr>
           <tr>
             <td>Quote form page with sidebar showing locations and next steps</td>
-            <td>When a visitor commits to the form, they want to know a real business will respond. Physical addresses and a visible next-step timeline on the same page reduce abandonment.</td>
+            <td>When a visitor commits to the form, they want to know a real business will respond. Physical addresses
+              and a visible next-step timeline on the same page reduce abandonment.</td>
           </tr>
           <tr>
             <td>A separate "Why Us" page built for consideration-stage visitors</td>
-            <td>Not every visitor is in crisis. Logistics managers evaluating vendors need deeper proof. A dedicated page handles them without cluttering the homepage.</td>
+            <td>Not every visitor is in crisis. Logistics managers evaluating vendors need deeper proof. A dedicated
+              page handles them without cluttering the homepage.</td>
           </tr>
         </tbody>
       </table>
@@ -580,9 +974,9 @@
     <div class="container-wide">
       <div class="container" style="padding:0;">
         <span class="kicker">04 — The Build</span>
-        <h2>Page-by-Page: Design Decisions and Their Function</h2>
+        <h2>Page-by-Page: What Each Section Is Doing for the Business</h2>
         <p class="lead" style="margin-top:1rem; max-width:660px;">
-          Four screenshots from the live site, annotated for product rationale.
+          Four screenshots from the live Vercel deployment, annotated for business function.
         </p>
       </div>
 
@@ -593,38 +987,44 @@
             <span class="screenshot-num">1</span>
             <div class="screenshot-header-text">
               <h3>Homepage — First Impression to First Scroll</h3>
-              <p>Primary requirement above the fold: establish relevance for a user under operational pressure before they exit.</p>
+              <p>One job above the fold: convince a stressed visitor they're in the right place.</p>
             </div>
           </div>
         </div>
         <div class="screenshot-wrap">
           <div class="browser-bar">
-            <div class="bd"></div><div class="bd"></div><div class="bd"></div>
-            <div class="browser-url">restorelogistics.com</div>
+            <div class="bd"></div>
+            <div class="bd"></div>
+            <div class="bd"></div>
+            <div class="browser-url">restore-logistics.vercel.app</div>
           </div>
-          <img
-            src="img/after-01.jpg"
-            alt="Restore Logistics homepage — hero and problem strip"
-            loading="lazy"
-          />
+          <img src="img/after-01.jpg" alt="Restore Logistics homepage — hero and problem strip" loading="lazy" />
         </div>
         <div class="container" style="padding:0;">
           <div class="annotations">
             <div class="ann">
               <span class="ann-dot">A</span>
-              <div class="ann-body"><strong>The headline names the problem, not the company.</strong> "We Fix What Others Walk Away From" signals that these people handle what other vendors won't. A dispatcher with a rejected load stops here.</div>
+              <div class="ann-body"><strong>The headline names the problem, not the company.</strong> "We Fix What
+                Others Walk Away From" signals that these people handle what other vendors won't. A dispatcher with a
+                rejected load stops here.</div>
             </div>
             <div class="ann">
               <span class="ann-dot">B</span>
-              <div class="ann-body"><strong>A Google review is in the hero — before any service is described.</strong> D'Angelo Pink's review establishes third-party credibility immediately. Every claim after it is read in a more favorable context.</div>
+              <div class="ann-body"><strong>A Google review is in the hero — before any service is described.</strong>
+                D'Angelo Pink's review establishes third-party credibility immediately. Every claim after it is read in
+                a more favorable context.</div>
             </div>
             <div class="ann">
               <span class="ann-dot">C</span>
-              <div class="ann-body"><strong>The problem strip forces self-identification.</strong> Shifted Load. Rejected Trailer. Overweight Rig. Seeing their exact situation named tells the visitor: these people know what I'm dealing with.</div>
+              <div class="ann-body"><strong>The problem strip forces self-identification.</strong> Shifted Load.
+                Rejected Trailer. Overweight Rig. Seeing their exact situation named tells the visitor: these people
+                know what I'm dealing with.</div>
             </div>
             <div class="ann">
               <span class="ann-dot">D</span>
-              <div class="ann-body"><strong>How It Works removes the fear of calling an unknown vendor.</strong> Request → estimate → mobilize. Three steps tells them exactly what happens next, which lowers the barrier to picking up the phone.</div>
+              <div class="ann-body"><strong>How It Works removes the fear of calling an unknown vendor.</strong> Request
+                → estimate → mobilize. Three steps tells them exactly what happens next, which lowers the barrier to
+                picking up the phone.</div>
             </div>
           </div>
         </div>
@@ -643,28 +1043,31 @@
         </div>
         <div class="screenshot-wrap">
           <div class="browser-bar">
-            <div class="bd"></div><div class="bd"></div><div class="bd"></div>
-            <div class="browser-url">restorelogistics.com</div>
+            <div class="bd"></div>
+            <div class="bd"></div>
+            <div class="bd"></div>
+            <div class="browser-url">restore-logistics.vercel.app</div>
           </div>
-          <img
-            src="img/after-02.jpg"
-            alt="Restore Logistics — services grid and advantages section"
-            loading="lazy"
-          />
+          <img src="img/after-02.jpg" alt="Restore Logistics — services grid and advantages section" loading="lazy" />
         </div>
         <div class="container" style="padding:0;">
           <div class="annotations">
             <div class="ann">
               <span class="ann-dot">A</span>
-              <div class="ann-body"><strong>Load Restoration takes the dominant position because it addresses the highest-priority user need.</strong> A user searching for load rework has already decided to hire someone. The layout reflects that priority — it doesn't make them scan a grid of equal tiles to find it.</div>
+              <div class="ann-body"><strong>Load Restoration takes the dominant position because it drives the
+                  highest-intent traffic.</strong> A visitor searching for load rework has already decided to hire
+                someone. Make it easy to find — don't make them scan equal tiles.</div>
             </div>
             <div class="ann">
               <span class="ann-dot">B</span>
-              <div class="ann-body"><strong>All four services in one view signals a full-service operation.</strong> A visitor sees they can get their load inspected, repacked, and stored without switching vendors — that's a real competitive advantage.</div>
+              <div class="ann-body"><strong>All four services in one view signals a full-service operation.</strong> A
+                visitor sees they can get their load inspected, repacked, and stored without switching vendors — that's
+                a real competitive advantage.</div>
             </div>
             <div class="ann">
               <span class="ann-dot">C</span>
-              <div class="ann-body"><strong>Specific data points over generic claims.</strong> 25+ years, same-day invoicing, two locations, nationwide coverage — each one resolves a specific trust question without asking the user to take anything on faith.</div>
+              <div class="ann-body"><strong>Facts, not claims.</strong> 25+ years, same-day invoicing, two locations,
+                nationwide coverage — each one answers "why them?" without asking the visitor to take it on faith.</div>
             </div>
           </div>
         </div>
@@ -683,28 +1086,30 @@
         </div>
         <div class="screenshot-wrap">
           <div class="browser-bar">
-            <div class="bd"></div><div class="bd"></div><div class="bd"></div>
-            <div class="browser-url">restorelogistics.com</div>
+            <div class="bd"></div>
+            <div class="bd"></div>
+            <div class="bd"></div>
+            <div class="browser-url">restore-logistics.vercel.app</div>
           </div>
-          <img
-            src="img/after-03.jpg"
-            alt="Restore Logistics — reviews section and locations grid"
-            loading="lazy"
-          />
+          <img src="img/after-03.jpg" alt="Restore Logistics — reviews section and locations grid" loading="lazy" />
         </div>
         <div class="container" style="padding:0;">
           <div class="annotations">
             <div class="ann">
               <span class="ann-dot">A</span>
-              <div class="ann-body"><strong>One specific review at full width beats a wall of generic stars.</strong> "They reworked this load faster than I get unloaded at the receiver" — that answers how fast they are, in the most credible format possible: a real customer's own words.</div>
+              <div class="ann-body"><strong>One specific review at full width beats a wall of generic stars.</strong>
+                "They reworked this load faster than I get unloaded at the receiver" — that answers how fast they are,
+                in the most credible format possible: a real customer's own words.</div>
             </div>
             <div class="ann">
               <span class="ann-dot">B</span>
-              <div class="ann-body"><strong>Three more reviews create consensus.</strong> Different customers, same conclusion. That removes the possibility the featured review was a one-off.</div>
+              <div class="ann-body"><strong>Three more reviews create consensus.</strong> Different customers, same
+                conclusion. That removes the possibility the featured review was a one-off.</div>
             </div>
             <div class="ann">
               <span class="ann-dot">C</span>
-              <div class="ann-body"><strong>Real addresses prove a real business.</strong> Not a broker. Fixed infrastructure in Arlington and Houston — and critical for local search indexing.</div>
+              <div class="ann-body"><strong>Real addresses prove a real business.</strong> Not a broker. Fixed
+                infrastructure in Arlington and Houston — and critical for local search indexing.</div>
             </div>
           </div>
         </div>
@@ -723,28 +1128,32 @@
         </div>
         <div class="screenshot-wrap">
           <div class="browser-bar">
-            <div class="bd"></div><div class="bd"></div><div class="bd"></div>
-            <div class="browser-url">restorelogistics.com</div>
+            <div class="bd"></div>
+            <div class="bd"></div>
+            <div class="bd"></div>
+            <div class="browser-url">restore-logistics.vercel.app</div>
           </div>
-          <img
-            src="img/after-04.jpg"
-            alt="Restore Logistics — FAQ accordion, CTA band, and footer"
-            loading="lazy"
-          />
+          <img src="img/after-04.jpg" alt="Restore Logistics — FAQ accordion, CTA band, and footer" loading="lazy" />
         </div>
         <div class="container" style="padding:0;">
           <div class="annotations">
             <div class="ann">
               <span class="ann-dot">A</span>
-              <div class="ann-body"><strong>The FAQ removes the last objections before the call.</strong> "Do you handle refrigerated freight?" "Can you come to us?" Answered on the page, they stop being reasons to call someone else.</div>
+              <div class="ann-body"><strong>The FAQ removes the last objections before the call.</strong> "Do you handle
+                refrigerated freight?" "Can you come to us?" Answered on the page, they stop being reasons to call
+                someone else.</div>
             </div>
             <div class="ann">
               <span class="ann-dot">B</span>
-              <div class="ann-body"><strong>The CTA appears at the natural decision point.</strong> After the hero, services, reviews, and FAQ — the user who's still reading has cleared every objection. "Your Freight is Stuck. Let's Fix That." restates their situation and surfaces two contact paths immediately below. No additional navigation required.</div>
+              <div class="ann-body"><strong>The CTA hits at peak readiness.</strong> After the hero, services, reviews,
+                and FAQ — the visitor who's still reading is ready to act. "Your Freight is Stuck. Let's Fix That."
+                restates the situation and puts two actions immediately below. No hunting.</div>
             </div>
             <div class="ann">
               <span class="ann-dot">C</span>
-              <div class="ann-body"><strong>The footer is a fallback for anyone still undecided.</strong> Service links, phone number, both addresses — a clear path to contact even for the visitor who scrolled past everything.</div>
+              <div class="ann-body"><strong>The footer is a fallback for anyone still undecided.</strong> Service links,
+                phone number, both addresses — a clear path to contact even for the visitor who scrolled past
+                everything.</div>
             </div>
           </div>
         </div>
@@ -767,19 +1176,23 @@
       <div class="grid-2" style="margin-top:2.5rem;">
         <div class="card">
           <h4>Homepage</h4>
-          <p style="margin-top:0.5rem; font-size:0.91rem;">Handles the broadest range of visit types — from first touch to first contact. Designed to work as a standalone without relying on any other page.</p>
+          <p style="margin-top:0.5rem; font-size:0.91rem;">Full funnel in one page — hero to CTA. Handles the most
+            traffic and does the most conversion work.</p>
         </div>
         <div class="card">
           <h4>Services Page</h4>
-          <p style="margin-top:0.5rem; font-size:0.91rem;">Detailed service blocks, each with its own CTA. SEO landing point for visitors searching a specific service.</p>
+          <p style="margin-top:0.5rem; font-size:0.91rem;">Detailed service blocks, each with its own CTA. SEO landing
+            point for visitors searching a specific service.</p>
         </div>
         <div class="card">
           <h4>Why Us Page</h4>
-          <p style="margin-top:0.5rem; font-size:0.91rem;">For vendor evaluation — deeper proof points, all four reviews, and FAQ. Serves the visitor who isn't in crisis yet.</p>
+          <p style="margin-top:0.5rem; font-size:0.91rem;">For vendor evaluation — deeper proof points, all four
+            reviews, and FAQ. Serves the visitor who isn't in crisis yet.</p>
         </div>
         <div class="card">
           <h4>Get a Quote Page</h4>
-          <p style="margin-top:0.5rem; font-size:0.91rem;">Form + sidebar with addresses and a clear next-step timeline. Captures leads who won't call cold.</p>
+          <p style="margin-top:0.5rem; font-size:0.91rem;">Form + sidebar with addresses and a clear next-step timeline.
+            Captures leads who won't call cold.</p>
         </div>
       </div>
 
@@ -828,17 +1241,20 @@
           <ul class="styled-list">
             <li>A Google-indexed site capturing freight emergency search traffic in DFW and Houston</li>
             <li>New visitors can evaluate, trust, and contact Restore in under 2 minutes</li>
-            <li>A 24/7 digital presence that operates independently of staff availability</li>
+            <li>A 24/7 sales asset that works while the business is focused on operations</li>
             <li>Four Google reviews amplified at high visibility — including in the hero</li>
             <li>A quote form capturing leads from visitors who won't call cold</li>
           </ul>
         </div>
       </div>
 
-      <div style="margin-top:2.5rem; background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:1.75rem;">
-        <h4 style="margin-bottom:0.75rem;">The Core Problem Solved</h4>
+      <div
+        style="margin-top:2.5rem; background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:1.75rem;">
+        <h4 style="margin-bottom:0.75rem;">The Core Value Proposition</h4>
         <p style="font-size:0.93rem;">
-          Restore Logistics already had the operational capability to outperform most competitors in their market. The gap was discoverability and first-impression credibility. This project closed both — without changing anything about the underlying business.
+          Restore Logistics already had the capability to outperform every competitor in their market. What they lacked
+          was a way to put that proof in front of customers who were actively looking for it. This website is that
+          channel.
         </p>
       </div>
     </div>
@@ -853,8 +1269,8 @@
         25 years of experience. Real reviews. Two facilities. None of it was visible online. Now it is.
       </p>
       <div class="outcome-buttons">
-        <a href="index.html" class="btn-white-solid">View the Live Site →</a>
-        <a href="get-a-quote.html" class="btn-outline-light">See the Quote Page</a>
+        <a href="https://restore-logistics.vercel.app" class="btn-white-solid">View the Live Site →</a>
+        <a href="https://restore-logistics.vercel.app/get-a-quote.html" class="btn-outline-light">See the Quote Page</a>
       </div>
     </div>
   </div>
@@ -868,4 +1284,5 @@
   </footer>
 
 </body>
+
 </html>
